@@ -1,0 +1,8 @@
+[submodule "thirdparty/DLB"]
+	path = thirdparty/DLB
+	url = git@github.com:HanetakaChou/Dual-Quaternion-Linear-Blending.git
+	branch = master
+[submodule "thirdparty/DXUT"]
+	path = thirdparty/DXUT
+	url = git@github.com:microsoft/DXUT.git
+	branch = main

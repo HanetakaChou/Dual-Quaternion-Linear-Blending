@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{1c3947be-8a74-4ade-a73d-e63b7893b2bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{7a1655e0-35c5-41f9-aed4-62eac20b6261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty">
+      <UniqueIdentifier>{56fbf993-2049-4a62-baec-b1e5ba4c02ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\DXUT">
+      <UniqueIdentifier>{e88b3c62-052a-4a14-b50f-4d8f52bf7c6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\DXUT\Core">
+      <UniqueIdentifier>{34803bc0-85d9-4af9-82a7-0af3c4e68267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\DXUT\Optional">
+      <UniqueIdentifier>{c5737091-a44e-4aa2-a089-53aafd50ae83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\DLB">
+      <UniqueIdentifier>{64861c6d-64d8-411b-a08a-fac341724ba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\DXUT\Media">
+      <UniqueIdentifier>{fdf0c2d3-ace9-46ae-b6ad-90644f077afd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\DXUT\Media\UI">
+      <UniqueIdentifier>{cd0378c6-0c57-4ee6-8ac4-2b484dce7c86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{e7018c63-d677-4373-b4ec-a5e326da22fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\AnimatedCharacter.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\AnimatedCharacterInstance.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\CharacterAnimation.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Core\WICTextureLoader.cpp">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Core\ScreenGrab.cpp">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Core\DXUTmisc.cpp">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Core\DXUTDevice11.cpp">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Core\DXUT.cpp">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Core\dxerr.cpp">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Core\DDSTextureLoader.cpp">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Optional\DXUTres.cpp">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Optional\DXUTsettingsdlg.cpp">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Optional\SDKmisc.cpp">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Optional\DXUTcamera.cpp">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\DXUT\Optional\DXUTgui.cpp">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="..\assets\animation.cpp">
+      <Filter>assets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\assets\mesh.cpp">
+      <Filter>assets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\AnimatedCharacter.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\AnimatedCharacterInstance.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\CharacterAnimation.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Core\ScreenGrab.h">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Core\DXUTmisc.h">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Core\DXUTDevice11.h">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Core\WICTextureLoader.h">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Core\DXUT.h">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Core\dxerr.h">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Core\DDSTextureLoader.h">
+      <Filter>thirdparty\DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Optional\DXUTgui.h">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Optional\DXUTres.h">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Optional\DXUTsettingsdlg.h">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Optional\SDKmisc.h">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DXUT\Optional\DXUTcamera.h">
+      <Filter>thirdparty\DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\DLB\DLB.h">
+      <Filter>thirdparty\DLB</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\Character.hlsli">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\thirdparty\DLB\DLB.hlsli">
+      <Filter>thirdparty\DLB</Filter>
+    </None>
+    <None Include="..\thirdparty\DLB\DLB.glsli">
+      <Filter>thirdparty\DLB</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\shaders\CharacterAnimatedVS.hlsl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\CharacterAnimatedVS_fast.hlsl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\CharacterPS.hlsl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\thirdparty\DXUT\Media\UI\dxutcontrols.dds">
+      <Filter>thirdparty\DXUT\Media\UI</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\thirdparty\DXUT\Media\UI\Font.dds">
+      <Filter>thirdparty\DXUT\Media\UI</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+</Project>
