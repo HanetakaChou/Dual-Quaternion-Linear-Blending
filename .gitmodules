@@ -1,0 +1,7 @@
+[submodule "DXUT"]
+	path = DXUT
+	url = git@github.com:microsoft/DXUT.git
+[submodule "DLB"]
+	path = DLB
+	url = git@github.com:HanetakaChou/Dual-Quaternion-Linear-Blending.git
+	branch = release
