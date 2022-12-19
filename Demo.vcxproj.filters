@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{6c4acdda-e600-462b-bd50-542c8a94cb34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code">
+      <UniqueIdentifier>{73015ce9-35e2-462f-b27d-20deeac7e32f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\assets">
+      <UniqueIdentifier>{261f9135-bbfc-4aa5-ad10-0b464f9ac26d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{9b6e6cd8-c5ee-4f27-b26e-bdccf2d3a6ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT\Core">
+      <UniqueIdentifier>{98554015-aa60-4650-a00c-c714c0d524de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT\Optional">
+      <UniqueIdentifier>{e91041b2-cb91-42bb-9887-e6f2c75077c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT\Media">
+      <UniqueIdentifier>{9b27f363-a14c-4666-9393-2e1f77d59e4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT\Media\UI">
+      <UniqueIdentifier>{91b057bd-5a4b-48e4-aed5-fb8b4c9301f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\character">
+      <UniqueIdentifier>{8c5d474f-b54c-4215-92c8-4a8a3d120f3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\character">
+      <UniqueIdentifier>{11ca736b-e373-4dc5-bedd-b5758c74399d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\main.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="code\assets\animation_asset.cpp">
+      <Filter>code\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="code\assets\mesh_asset.cpp">
+      <Filter>code\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DDSTextureLoader.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\dxerr.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUT.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTDevice11.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTmisc.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\ScreenGrab.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\WICTextureLoader.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTsettingsdlg.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmisc.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTcamera.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTgui.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTres.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="code\character\AnimatedCharacter.cpp">
+      <Filter>code\character</Filter>
+    </ClCompile>
+    <ClCompile Include="code\character\AnimatedCharacterInstance.cpp">
+      <Filter>code\character</Filter>
+    </ClCompile>
+    <ClCompile Include="code\character\CharacterAnimation.cpp">
+      <Filter>code\character</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DXUT\Core\DDSTextureLoader.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\dxerr.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUT.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTDevice11.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTmisc.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\ScreenGrab.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\WICTextureLoader.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTsettingsdlg.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmisc.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTcamera.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTgui.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTres.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="code\character\AnimatedCharacter.h">
+      <Filter>code\character</Filter>
+    </ClInclude>
+    <ClInclude Include="code\character\AnimatedCharacterInstance.h">
+      <Filter>code\character</Filter>
+    </ClInclude>
+    <ClInclude Include="code\character\CharacterAnimation.h">
+      <Filter>code\character</Filter>
+    </ClInclude>
+    <ClInclude Include="code\DLB.h">
+      <Filter>code</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shaders\character\CharacterPS.hlsl">
+      <Filter>shaders\character</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\character\CharacterAnimatedVS.hlsl">
+      <Filter>shaders\character</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\character\CharacterAnimatedVS_fast.hlsl">
+      <Filter>shaders\character</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="DXUT\Media\UI\dxutcontrols.dds">
+      <Filter>DXUT\Media\UI</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="DXUT\Media\UI\Font.dds">
+      <Filter>DXUT\Media\UI</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\character\Character.hlsli">
+      <Filter>shaders\character</Filter>
+    </None>
+    <None Include="shaders\DLB.hlsli">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

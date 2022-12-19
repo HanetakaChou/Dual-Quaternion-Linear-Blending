@@ -1,75 +1,68 @@
-#pragma once
+#ifndef _ANIMATED_CHARACTER_H_
+#define _ANIMATED_CHARACTER_H_ 1
 
-#include <vector>
+#include "CharacterAnimation.h"
 
 enum SKINNING_TYPE
 {
     ST_LINEAR = 0,
-    ST_DUALQUAT,
-    ST_FAST_DUALQUAT,
+    ST_FAST_DUALQUAT = 1
 };
 
-class CharacterAnimation;
-
-/*
-    This just wraps up DX10 vars for a single character mesh.  It also holds a list of animations that this character can run through.
-
-    This class is filled in by the animation loader, so there is a dependency on this class.
-*/
 class AnimatedCharacter
 {
-public:
-    struct Vertex
+private:
+    struct d3d_vertex
     {
-        D3DXVECTOR3 position;
-        D3DXVECTOR3 normal;
-        D3DXVECTOR2 uv;
-        D3DXVECTOR3 tangent;
-        D3DXVECTOR4 bones;
-        D3DXVECTOR4 weights;
+        float position[3];
+        int16_t uv[2];
+        int8_t normal[4];
+        int8_t tangent[4];
+        uint8_t bones[4];
+        uint8_t weights[4];
     };
 
-    // This represents a uniquie sub-section of the character
     struct SubMesh
     {
-        ID3D10Buffer *pVB;
-        ID3D10Buffer *pIB;
-        int numVertices, numIndices;
-        int meshSet;
-        UINT nameHash;
-        std::string texture;
-        std::string normal;
+        ID3D11Buffer *pVB;
+        ID3D11Buffer *pIB;
+        int numIndices;
+        ID3D11ShaderResourceView *base_color;
+        ID3D11ShaderResourceView *normal;
     };
 
-    typedef std::vector<CharacterAnimation *> AnimationList;
-    typedef std::vector<SubMesh> SubmeshList;
+    std::vector<SubMesh> m_characterMeshes;
 
-    AnimatedCharacter();
-    ~AnimatedCharacter();
+    ID3D11VertexShader *m_vertex_shader_linear;
+    ID3D11VertexShader *m_vertex_shader_dual_quaternion_fast;
+    ID3D11VertexShader *m_vertex_shader;
+    ID3D11PixelShader *m_pixel_shader;
+    ID3D11InputLayout *m_input_layout;
+    ID3D11RasterizerState *m_rasterizer_state;
+    ID3D11DepthStencilState *m_depth_stencil_state;
+    ID3D11BlendState *m_blend_state;
+    ID3D11SamplerState *m_sampler_state;
 
-    CharacterAnimation *GetAnimation(int index) { return index < (int)m_animations.size() ? m_animations[index] : NULL; };
-    HRESULT Initialize(ID3D10Device *pd3dDevice);
-    void Release();
+    void load_mesh_setion_1(ID3D11Device *d3d_device, ID3D11DeviceContext *d3d_device_context);
+    void load_mesh_setion_2(ID3D11Device *d3d_device, ID3D11DeviceContext *d3d_device_context);
+    void load_mesh_setion_3(ID3D11Device *d3d_device, ID3D11DeviceContext *d3d_device_context);
+    void load_mesh_setion_4(ID3D11Device *d3d_device, ID3D11DeviceContext *d3d_device_context);
+    void load_mesh_setion_5(ID3D11Device *d3d_device, ID3D11DeviceContext *d3d_device_context);
 
-    void addSingleDrawMesh(ID3D10Device *pd3dDevice, Vertex *vertices, UINT vtxCount, DWORD *indices, UINT idxCount, int meshSet, UINT nameHash, std::string texture, std::string normal);
+    static void CreateVertexBuffer(ID3D11Device *d3d_device, void *data, size_t size, ID3D11Buffer **out_buffer);
+    static void CreateIndexBuffer(ID3D11Device *d3d_device, void *data, size_t size, ID3D11Buffer **out_buffer);
+    void addSingleDrawMesh(ID3D11Device *d3d_device, ID3D11DeviceContext *d3d_device_context, ID3D11Buffer *pVB, ID3D11Buffer *pIB, int numIndices, WCHAR CONST *texture, WCHAR CONST *normal);
 
-protected:
-    void addSingleDrawMesh(ID3D10Buffer *pVB, int numVerts, ID3D10Buffer *pIB, int numIndices, int meshSet, UINT namehash, std::string texture, std::string normal);
-    void CreateDefaultBuffer(ID3D10Device *pd3dDevice, void *data, UINT size, UINT bindFlags, ID3D10Buffer **ppBuffer);
-    void CreateEmptyDefaultBuffer(ID3D10Device *pd3dDevice, UINT size, UINT bindFlags, ID3D10Buffer **ppBuffer);
+    CharacterAnimation m_animation;
 
 public:
-    // DX10 vars
-    ID3D10Texture2D *animationsTexture;
-    SubmeshList m_characterMeshes;
-
-    // our local mesh data
-    AnimationList m_animations;
-
-    int numAttachments;
-    int numBones;
-    float boundingRadius; // rough gauge of size
-
-    // character logic consts
-    float fWalkSpeed;
+    void Initialize(ID3D11Device *pd3dDevice, ID3D11DeviceContext *d3d_device_context);
+    void load(ID3D11Device *d3d_device, ID3D11DeviceContext *d3d_device_context);
+    float getAnimationDuration() const;
+    void get_pose_matrices(float animation_time, DirectX::XMFLOAT4X4 *out_pose_matrices, int max_bones_count) const;
+    void get_pose_dual_quaternions(float animation_time, DirectX::XMFLOAT4 (*out_pose_dual_quaternions)[2], int max_bones_count) const;
+    void draw(ID3D11DeviceContext *d3d_device_context, enum SKINNING_TYPE skinning_type) const;
+    void Release();
 };
+
+#endif
